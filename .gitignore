@@ -1,2 +1,35 @@
-
 *.class
+*/gradlew
+*/mvnw
+*/mvnw.cmd
+*.bat
+/target/
+.mvn/*
+*/.mvn/*
+*/classes
+*.kotlin_module
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
