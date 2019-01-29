@@ -8,4 +8,6 @@ ______                                     _
 ```                                              
 
 # solr demo
-`Demo Application to insert data to a localhost Solar application.`
+`Demo Application to insert data to a localhost Solar application.
+It Reads NYC CitiBike information (location, coordinates, Number of available bikes etc.) and allows us to perform CRUD operations.
+`
