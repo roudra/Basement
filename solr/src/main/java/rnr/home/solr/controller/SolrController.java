@@ -14,6 +14,7 @@ import rnr.home.solr.standalone.FeedLoader;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 public class SolrController {
@@ -49,12 +50,17 @@ public class SolrController {
 
     @RequestMapping(value = "/feed/update", method = RequestMethod.GET)
     public int update() {
-        SearchBean sb = new SearchBean();
-        sb.setAvailableBikes(0);
-        Collection<StationBean> result = cbcr.retrieve(sb);
+        Collection<StationBean> result =  cbsr.findAllStationsWithMissingBikes();
         cbcr.partialUpdate(result);
         return Iterables.size(result);
     }
+
+    @RequestMapping(value = "/feed/reset", method = RequestMethod.GET)
+    public int reset() {
+        List<StationBean> result =  cbsr.findAllStationsWithOutMissingBikes();
+        return Iterables.size(result);
+    }
+
 
     @RequestMapping(value = "/solr/purge", method = RequestMethod.GET)
     public boolean delete() {

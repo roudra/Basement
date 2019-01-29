@@ -14,5 +14,7 @@ public interface CitiBikeStandardRespository extends SolrCrudRepository<StationB
     @Query(value ="availableDocks:0")
     List<StationBean> findAllStationsWithMissingBikes();
 
+    @Query(value ="availableDocks:[1 TO *]")
+    List<StationBean> findAllStationsWithOutMissingBikes();
 
 }

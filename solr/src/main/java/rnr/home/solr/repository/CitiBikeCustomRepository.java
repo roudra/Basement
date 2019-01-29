@@ -33,7 +33,7 @@ public class CitiBikeCustomRepository {
 
     public void partialUpdate(Collection<StationBean> res) {
         res.forEach(r -> {
-            partialUpdate(r.getRecordId(), "availableBikes", r.getAvailableDocks());
+            partialUpdate(r.getRecordId(), "availableBikes", r.getTotalDocks());
         });
     }
 
