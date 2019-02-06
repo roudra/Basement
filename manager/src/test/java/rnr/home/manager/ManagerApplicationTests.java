@@ -1,4 +1,4 @@
-package rnr.home.admin;
+package rnr.home.manager;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,11 +7,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SbadminApplicationTests {
+public class ManagerApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
 
