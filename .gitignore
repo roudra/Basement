@@ -4,6 +4,7 @@
 */mvnw.cmd
 *.bat
 /target/
+*/bin/*
 .mvn/*
 */.mvn/*
 */classes
@@ -33,3 +34,5 @@
 /.nb-gradle/
 /build/
 
+### Visual Studio Code ###
+.vscode/*
