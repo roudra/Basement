@@ -1,16 +1,17 @@
 package rnr.home.solr.bean;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import lombok.Data;
-import org.apache.solr.client.solrj.beans.Field;
-
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+import lombok.Data;
+
 @JsonAutoDetect
 public @Data class CitiBikeStationInfo implements Serializable {
-    private Date executionTime;
+	private static final long serialVersionUID = 1L;
+	private Date executionTime;
     private Collection<StationBean> stationBeanList;
 }
 

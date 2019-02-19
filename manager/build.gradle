@@ -1,21 +1,20 @@
-apply plugin: 'java'
-apply plugin: 'maven'
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+    id 'java'
+    id 'maven'
+}
 
 group = 'rnr.home'
-version = '0.0.1-SNAPSHOT'
+version = '1.0'
 
 description = """manager"""
 
-sourceCompatibility = 1.5
-targetCompatibility = 1.5
-tasks.withType(JavaCompile) {
-	options.encoding = 'UTF-8'
-}
-
-
+//tasks.withType(JavaCompile) {
+//	options.encoding = 'UTF-8'
+//}
 
 repositories {
-        
      maven { url "http://repo.maven.apache.org/maven2" }
 }
 dependencies {
